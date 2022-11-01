@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    ports:
+      - 80:80
+    volumes:
+      - /.data:/data
+
+  caddy:
+    image: caddy:2.0.0-alpine
+    ports:
+      - 443:443
+    volumes:
+      - .Caddyfile:/etc/caddy/Caddyfile

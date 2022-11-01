@@ -1,0 +1,4 @@
+bitwarden.sgfairchild.com:443 {
+    reverse_proxy bitwarden:80
+}
+
